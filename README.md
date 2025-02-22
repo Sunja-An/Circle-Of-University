@@ -4,20 +4,50 @@
 
 ## COU Development Environment
 
-    MAC OS M3
+|     Property     |            Version/Tool            |
+| :--------------: | :--------------------------------: |
+|        OS        |               MAC OS               |
+|     Next.js      |               15.1.7               |
+| Java spring boot |               3.4.2                |
+|   React Native   |               0.76.7               |
+| Development Tool | Visual Studio Code / Intellij IDEA |
 
-### Technology Stack
+## Technology Stack
 
-#### FrontEnd
+### FrontEnd
 
-#### BackEnd
+<img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"> <img src="https://img.shields.io/badge/tailwind-06B6D4?style=for-the-badge&logo=tailwindCSS&logoColor=white"> <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 
-#### App
+### BackEnd
 
-#### CI/CD
+<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
 
-#### Build Tool
+### App
+
+<img src="https://img.shields.io/badge/react native-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+
+### CI/CD
+
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+
+### Build Tool
+
+<img src="https://img.shields.io/badge/bazel-43A047?style=for-the-badge&logo=bazel&logoColor=white">
 
 ## Functions
 
-### 📍 Circle Gathering
+### 📍 Circle Finding
+
+### 📍 User SignIn / SignUp
+
+### 📍 Circle Temporal Entering
+
+### 📍 University TImetable
+
+## Author
+
+| ![Image](https://github.com/user-attachments/assets/02a7bd06-7436-4b91-95fc-ca9544bb7846) |
+| ----------------------------------------------------------------------------------------- |
+| SUNWOO AN(@Sunja-An)                                                                      |
+| 🇰🇷 Kyungpook National University                                                          |
+| 📩 sunja1472@gmail.com                                                                    |
