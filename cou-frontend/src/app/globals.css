@@ -3,19 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fffafa;
+  --foreground: #121212;
+  --primary: #fcc6d9;
+  --secondary: #f783ac 93.3%;
+  --gray-background: #f1f3f5;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "pretendard-JP";
+  src: url("/public/font/PretendardJPVariable.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "studioSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/public/font/StudioSans.otf") format("otf");
 }
