@@ -46,8 +46,18 @@
 
 ## Author
 
-| ![Image](https://github.com/user-attachments/assets/02a7bd06-7436-4b91-95fc-ca9544bb7846) |
+| <img src="https://github.com/user-attachments/assets/02a7bd06-7436-4b91-95fc-ca9544bb7846" alt="Image" width="225" height="300" /> |
 | ----------------------------------------------------------------------------------------- |
 | SUNWOO AN(@Sunja-An)                                                                      |
 | 🇰🇷 Kyungpook National University                                                          |
 | 📩 sunja1472@gmail.com                                                                    |
+
+
+## Contributor
+
+| <img src="https://github.com/user-attachments/assets/02a7bd06-7436-4b91-95fc-ca9544bb7846" alt="Image" width="225" height="300" /> |
+| ----------------------------------------------------------------------------------------- |
+| SUNWOO AN(@Sunja-An)                                                                      |
+| 🇰🇷 Kyungpook National University                                                          |
+| 📩 sunja1472@gmail.com                                                                    |
+
