@@ -1,50 +1,50 @@
-# Welcome to your Expo app 👋
+# 📱 COU-Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<br />
 
-## Get started
+      ✨ Environment
 
-1. Install dependencies
+      🖥️ OS - Mac OS
+      📆 Development Period: 2025.03.01 ~
 
-   ```bash
-   npm install
-   ```
+<br />
 
-2. Start the app
+## 🧑🏻‍💻 Tech Stack
 
-   ```bash
-    npx expo start
-   ```
+![image](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![image](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![image](https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white) ![image](https://img.shields.io/badge/microsoft%20azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 
-In the output, you'll find options to open the app in a
+<br />
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📌 Functions
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+<br />
 
-## Get a fresh project
+### ✨ Auth
 
-When you're ready, run:
+<br />
 
-```bash
-npm run reset-project
-```
+### ✨ Circle
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+<br />
 
-## Learn more
+### ✨ University
 
-To learn more about developing your project with Expo, look at the following resources:
+<br />
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## ✏️ Author
 
-## Join the community
+| <img src="https://github.com/user-attachments/assets/02a7bd06-7436-4b91-95fc-ca9544bb7846" alt="Image" width="225" height="300" /> |
+| ---------------------------------------------------------------------------------------------------------------------------------- |
+| SUNWOO AN(@Sunja-An)                                                                                                               |
+| 🇰🇷 Kyungpook National University                                                                                                   |
+| 📩 sunja1472@gmail.com                                                                                                             |
 
-Join our community of developers creating universal apps.
+<br />
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📍 Contributor
+
+| <img src="https://github.com/user-attachments/assets/02a7bd06-7436-4b91-95fc-ca9544bb7846" alt="Image" width="225" height="300" /> |
+| ---------------------------------------------------------------------------------------------------------------------------------- |
+| SUNWOO AN(@Sunja-An)                                                                                                               |
+| 🇰🇷 Kyungpook National University                                                                                                   |
+| 📩 sunja1472@gmail.com                                                                                                             |
