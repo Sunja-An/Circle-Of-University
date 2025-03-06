@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "cou-mobild",
-    "slug": "cou-mobild",
-    "version": "1.0.0",
+    "name": "COU",
+    "slug": "COU",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/svg/COU_Logo.svg",
-    "scheme": "myapp",
+    "scheme": "cou-mobile",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -14,7 +14,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/svg/COU_Logo.svg",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffafa"
       }
     },
     "web": {
@@ -25,12 +25,23 @@
     "plugins": [
       "expo-router",
       [
+        "expo-asset",
+        {
+          "assets": [
+            "./assets/images/icon.png",
+            "./assets/svg/Bell.svg",
+            "./assets/svg/Home.svg",
+            "./assets/svg/TimeTable.svg"
+          ]
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/svg/COU_Logo.svg",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#FFFAFA"
         }
       ]
     ],
