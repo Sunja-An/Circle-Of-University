@@ -13,10 +13,10 @@ import java.net.URI;
 @Slf4j
 @RestControllerAdvice
 public class CustomExceptionHandler {
-    @ExceptionHandler(ErrorHandling.class)
+    @ExceptionHandler(CustomException.class)
     public ResponseEntity<ProblemDetail> handleCustomException(
             HttpServletRequest request,
-            ErrorHandling e
+            CustomException e
     ) {
         ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(
                 e.getHttpStatus(),
@@ -29,10 +29,10 @@ public class CustomExceptionHandler {
         return new ResponseEntity<>(problemDetail, e.getHttpStatus());
     }
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(java.lang.Exception.class)
     public ResponseEntity<ProblemDetail> handleException(
             HttpServletRequest request,
-            Exception e
+            java.lang.Exception e
     ){
         ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(
                 HttpStatus.INTERNAL_SERVER_ERROR,
