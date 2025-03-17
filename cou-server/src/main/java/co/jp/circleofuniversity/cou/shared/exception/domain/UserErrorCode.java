@@ -16,16 +16,16 @@ public enum UserErrorCode implements ErrorCode {
 
     @Override
     public String message() {
-        return "";
+        return this.message;
     }
 
     @Override
     public String statusCode() {
-        return "";
+        return this.code;
     }
 
     @Override
     public HttpStatus httpStatus() {
-        return null;
+        return this.httpStatus;
     }
 }
