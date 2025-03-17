@@ -7,4 +7,5 @@ public record ResponseTokenDto(
     public static ResponseTokenDto of(String accessToken, String refreshToken){
         return new ResponseTokenDto(accessToken, refreshToken);
     }
+
 }

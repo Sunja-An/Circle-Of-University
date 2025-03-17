@@ -3,6 +3,12 @@ package co.jp.circleofuniversity.cou.shared.auth.service;
 import co.jp.circleofuniversity.cou.shared.auth.controller.dto.ResponseTokenDto;
 import co.jp.circleofuniversity.cou.shared.auth.entity.ConfirmationToken;
 import co.jp.circleofuniversity.cou.shared.auth.repository.MailRepository;
+import co.jp.circleofuniversity.cou.shared.auth.utils.AuthStatus;
+import co.jp.circleofuniversity.cou.shared.exception.CustomException;
+import co.jp.circleofuniversity.cou.shared.exception.domain.AuthErrorCode;
+import co.jp.circleofuniversity.cou.user.entity.MemberUser;
+import co.jp.circleofuniversity.cou.user.repository.MemberUserRepository;
+
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.extern.slf4j.Slf4j;
@@ -26,12 +32,19 @@ public class EmailService {
     private final JavaMailSender mailSender;
     private final MailRepository mailRepository;
     private final JwtService jwtService;
+    private final MemberUserRepository memberUserRepository;
 
     @Autowired
-    public EmailService(JavaMailSender mailSender, MailRepository mailRepository, JwtService jwtService) {
+    public EmailService(
+            JavaMailSender mailSender,
+            MailRepository mailRepository,
+            JwtService jwtService,
+            MemberUserRepository memberUserRepository
+    ) {
         this.mailSender = mailSender;
         this.mailRepository = mailRepository;
         this.jwtService = jwtService;
+        this.memberUserRepository = memberUserRepository;
     }
 
     @Async
@@ -52,7 +65,6 @@ public class EmailService {
                 // Email Content
                 message.setText("Click Here to Registeration on COU‼ http://localhost:3000/auth/verify?token="+token.getConfirmationToken());
 
-
                 ClassPathResource classPathResource = new ClassPathResource("/static/image/Mime_Message_Icon.png");
                 message.addAttachment("COU-introduction.png",classPathResource);
             }
@@ -67,15 +79,28 @@ public class EmailService {
 
     // Email Token Publish
     public ResponseEntity<?> confirmEmail(String confirmationToken) {
-        ConfirmationToken token = mailRepository.findByConfirmationToken(confirmationToken);
+        // Null 의 가능성이 있는 것은 Entity 로 받아와서 if 문으로 처리하는 것보다는
+        // Optional 로 받아와서, orElseThrow 로 처리하는 것이 좋다.
 
-        if(token == null){
-            return ResponseEntity.badRequest().body("[Error]: Couldn't verify Email");
+        // 토큰 탈취 위험이 있으니 한번 생각해보기.
+        ConfirmationToken token = mailRepository.findByConfirmationToken(confirmationToken)
+                .orElseThrow(() -> CustomException.of(AuthErrorCode.INVALID_TOKEN));
+
+        String email = token.getEmail();
+
+        if(memberUserRepository.findByEmail(email).isEmpty()){
+            log.info("[Confirm Email] Email Doesn't Exist");
+            MemberUser memberUser = new MemberUser(email, token);
+            memberUserRepository.save(memberUser);
+
+            return ResponseEntity.ok().body(AuthStatus.NEED_SIGNUP);
         }
 
-        final String accessToken = jwtService.generateAccessToken(token.getEmail());
-        final String refreshToken = jwtService.generateRefreshToken(token.getEmail());
+        final String accessToken = jwtService.generateAccessToken(email, token.getRole());
+        final String refreshToken = jwtService.generateRefreshToken(email);
 
-        return ResponseEntity.ok().body(new ResponseTokenDto(accessToken, refreshToken));
+        ResponseTokenDto responseToken = new ResponseTokenDto(accessToken, refreshToken);
+
+        return ResponseEntity.ok().body(responseToken);
     }
 }

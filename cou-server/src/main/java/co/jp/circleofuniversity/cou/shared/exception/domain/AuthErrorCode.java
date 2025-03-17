@@ -10,7 +10,8 @@ public enum AuthErrorCode implements ErrorCode {
     NO_TOKEN(HttpStatus.UNAUTHORIZED, "A001", "トークンが見付かれないです。"),
     NO_USER(HttpStatus.NOT_FOUND, "A002", "ユーザーを見つけれないです。"),
     INVALID_TOKEN(HttpStatus.BAD_REQUEST, "A003", "正しくないトークンです。"),
-    EXPIRED_TOKEN(HttpStatus.BAD_REQUEST, "A004", "期間切れトークンです。");
+    EXPIRED_TOKEN(HttpStatus.BAD_REQUEST, "A004", "期間切れトークンです。"),
+    SAME_USER(HttpStatus.BAD_REQUEST, "A005", "同じユーザーが存在しております");
 
     private HttpStatus httpStatus;
     private String code;
